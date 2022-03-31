@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-card-title>Tester search criteria</mat-card-title>
+  <hr>
+  <div *ngIf="countries">
+    <mat-card-subtitle>Countries</mat-card-subtitle>
+    <mat-checkbox [checked]="allCountriesSelected" (change)="toggleAllCountries()">All countries</mat-checkbox>
+    <ul>
+      <li *ngFor="let country of countries">
+        <mat-checkbox [checked]="isCountrySelected(country)" (change)="toggleCountry(country)">{{country}}</mat-checkbox>
+      </li>
+    </ul>
+  </div>
+  <hr>
+  <div *ngIf="devices">
+    <mat-card-subtitle>Devices</mat-card-subtitle>
+    <mat-checkbox [checked]="allDevicesSelected" (change)="toggleAllDevices()">All devices</mat-checkbox>
+    <ul>
+      <li *ngFor="let device of devices">
+        <mat-checkbox [checked]="isDeviceSelected(device.deviceId)" (change)="toggleDevice(device.deviceId)">{{device.description}}</mat-checkbox>
+      </li>
+    </ul>
+  </div>
+  <mat-card-actions align="end">
+    <button mat-button color="warn" [disabled]="clearButtonDisabled" (click)="clearFilterChanges()">Clear</button>
+    <button mat-button color="primary" [disabled]="searchButtonDisabled" (click)="submitFilters()">Search</button>
+  </mat-card-actions>
+</mat-card>

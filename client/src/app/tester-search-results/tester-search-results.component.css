@@ -1,0 +1,21 @@
+.tester-name {
+  display: inline-block;
+  flex: 1;
+  padding-left: 20px;
+}
+.country {
+  display: inline-block;
+  flex: 0;
+  padding: 0 20px;
+  text-align: center;
+}
+.bugs {
+  display: inline-block;
+  flex: 0;
+  text-align: right;
+}
+
+.empty-set h3,
+.empty-set p {
+  text-align: center;
+}

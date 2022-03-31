@@ -1,0 +1,7 @@
+<app-tester-search-filters
+  [countries]="countries$ | async"
+  [devices]="devices$ | async"
+  [searchFilters]="searchFilters$ | async"
+  (filtersChange)="onFiltersChange($event)"></app-tester-search-filters>
+<app-tester-search-results [searchResultItems]="searchResults$ | async"></app-tester-search-results>
+

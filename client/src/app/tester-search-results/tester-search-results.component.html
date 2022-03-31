@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-title>Search results</mat-card-title>
+  <hr>
+  <mat-list *ngIf="searchResultItems && searchResultItems.length">
+    <mat-list-item>
+      <span class="tester-name">Country and Name </span>
+      <span class="bugs"> Bugs </span>
+    </mat-list-item>
+    <mat-list-item *ngFor="let resultItem of searchResultItems">
+      <span class="contry">{{resultItem.country}}</span>
+      <span class="tester-name">{{resultItem.testerName}}</span>
+      <span class="bugs">{{resultItem.numberOfBugsResolved}}</span>
+    </mat-list-item>
+  </mat-list>
+  <div *ngIf="searchResultItems && !searchResultItems.length" class="empty-set">
+    <h3>
+      Nothing found:(
+    </h3>
+    <p>Please change filters and try again.</p>
+  </div>
+</mat-card>

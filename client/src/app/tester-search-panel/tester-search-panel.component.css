@@ -1,0 +1,9 @@
+app-tester-search-filters {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+app-tester-search-results {
+  flex: 1;
+  margin: 10px;
+}
